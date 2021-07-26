@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:news/ganzerBlog.dart';
-import 'package:news/models/Blog.dart';
+import 'package:news/models/blog_model.dart';
 import 'package:news/responsive.dart';
 
 import '../../../constants.dart';
 
 class BlogPostCard extends StatelessWidget {
-  final Blog blog;
+  final BlogModel blog;
+
   const BlogPostCard({
     Key key,
     @required this.blog,
@@ -15,28 +16,31 @@ class BlogPostCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    int loadingPosts = 10;
+
     return Padding(
-      padding: const EdgeInsets.only(bottom: kDefaultPadding),
+      padding: const EdgeInsets.only(
+        bottom: 35,
+      ),
       child: Column(
         children: [
-          AspectRatio(
-            aspectRatio: 1.78,
-            child: Image.asset(
-              blog.image,
-            ),
-          ),
           Container(
             padding: EdgeInsets.all(kDefaultPadding),
             decoration: BoxDecoration(
               color: Colors.white,
-              borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(10),
-                bottomRight: Radius.circular(10),
-              ),
+              borderRadius: BorderRadius.circular(kDefaultPadding),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(8.0),
+                  child: Image.asset(
+                    blog.image,
+                    alignment: Alignment.center,
+                  ),
+                ),
+                const SizedBox(height: 20),
                 Row(
                   children: [
                     Text(
@@ -54,20 +58,16 @@ class BlogPostCard extends StatelessWidget {
                     ),
                   ],
                 ),
-                Padding(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: kDefaultPadding),
-                  child: Text(
-                    blog.title,
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
-                      fontSize: Responsive.isDesktop(context) ? 32 : 24,
-                      fontFamily: "Raleway",
-                      color: kDarkBlackColor,
-                      height: 1.3,
-                      fontWeight: FontWeight.w600,
-                    ),
+                Text(
+                  blog.title,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    fontSize: Responsive.isDesktop(context) ? 32 : 24,
+                    fontFamily: "Raleway",
+                    color: kDarkBlackColor,
+                    height: 1.3,
+                    fontWeight: FontWeight.w600,
                   ),
                 ),
                 Text(
@@ -121,6 +121,9 @@ class BlogPostCard extends StatelessWidget {
               ],
             ),
           ),
+          blogPosts.length <= loadingPosts
+              ? Text('größer als')
+              : Text('kleiner als')
         ],
       ),
     );

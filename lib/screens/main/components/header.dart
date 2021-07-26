@@ -14,8 +14,14 @@ class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.only(
+          bottomLeft: Radius.circular(40),
+          bottomRight: Radius.circular(40),
+        ),
+        color: kDarkBlackColor,
+      ),
       width: double.infinity,
-      color: kDarkBlackColor,
       child: SafeArea(
         child: Column(
           children: [
@@ -37,17 +43,26 @@ class Header extends StatelessWidget {
                           },
                         ),
 
-                      Text('Chiara',
-                          style: TextStyle(
-                              fontSize: 20.0, color: Colors.pink[200])),
+                      Text(
+                        'Chiara',
+                        style: TextStyle(
+                          fontSize: 20.0,
+                          color: Colors.pink[200],
+                        ),
+                      ),
 
-                      Text(' &',
-                          style:
-                              TextStyle(fontSize: 20.0, color: Colors.white)),
+                      Text(
+                        ' &',
+                        style: TextStyle(fontSize: 20.0, color: Colors.white),
+                      ),
 
-                      Text(' Linda',
-                          style: TextStyle(
-                              fontSize: 20.0, color: Colors.blue[200])),
+                      Text(
+                        ' Linda',
+                        style: TextStyle(
+                          fontSize: 20.0,
+                          color: Colors.blue[200],
+                        ),
+                      ),
 
                       Spacer(),
                       if (Responsive.isDesktop(context)) WebMenu(),
@@ -75,27 +90,6 @@ class Header extends StatelessWidget {
                         color: Colors.white,
                         fontFamily: 'Raleway',
                         height: 1.5,
-                      ),
-                    ),
-                  ),
-                  FittedBox(
-                    child: TextButton(
-                      onPressed: () {},
-                      child: Row(
-                        children: [
-                          Text(
-                            "Mehr anschauen",
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                            ),
-                          ),
-                          SizedBox(width: kDefaultPadding / 2),
-                          Icon(
-                            Icons.arrow_forward,
-                            color: Colors.white,
-                          ),
-                        ],
                       ),
                     ),
                   ),
