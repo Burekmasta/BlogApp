@@ -1,5 +1,7 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:news/ganzerBlog.dart';
 import 'package:news/models/blog_model.dart';
 import 'package:news/responsive.dart';
@@ -16,11 +18,9 @@ class BlogPostCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    int loadingPosts = 10;
-
     return Padding(
       padding: const EdgeInsets.only(
-        bottom: 35,
+        bottom: 20,
       ),
       child: Column(
         children: [
@@ -34,8 +34,8 @@ class BlogPostCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 ClipRRect(
-                  borderRadius: BorderRadius.circular(8.0),
-                  child: Image.asset(
+                  borderRadius: BorderRadius.circular(20.0),
+                  child: Image.network(
                     blog.image,
                     alignment: Alignment.center,
                   ),
@@ -66,14 +66,14 @@ class BlogPostCard extends StatelessWidget {
                     fontSize: Responsive.isDesktop(context) ? 32 : 24,
                     fontFamily: "Raleway",
                     color: kDarkBlackColor,
-                    height: 1.3,
+                    height: 2,
                     fontWeight: FontWeight.w600,
                   ),
                 ),
                 Text(
                   blog.description1,
                   maxLines: 4,
-                  style: TextStyle(height: 1.5),
+                  style: TextStyle(height: 2),
                 ),
                 SizedBox(height: kDefaultPadding),
                 Row(
@@ -102,8 +102,7 @@ class BlogPostCard extends StatelessWidget {
                     ),
                     Spacer(),
                     IconButton(
-                      icon: SvgPicture.asset(
-                          "assets/icons/feather_thumbs-up.svg"),
+                      icon: Icon(Icons.favorite_outline),
                       onPressed: () {},
                     ),
                     IconButton(
@@ -115,15 +114,12 @@ class BlogPostCard extends StatelessWidget {
                       icon:
                           SvgPicture.asset("assets/icons/feather_share-2.svg"),
                       onPressed: () {},
-                    ),
+                    )
                   ],
                 ),
               ],
             ),
           ),
-          blogPosts.length <= loadingPosts
-              ? Text('größer als')
-              : Text('kleiner als')
         ],
       ),
     );

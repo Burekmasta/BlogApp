@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Responsive-Blog-Theme-using-Flutter-master",
+            "name": "BlogApp",
             "request": "launch",
             "type": "dart"
         },

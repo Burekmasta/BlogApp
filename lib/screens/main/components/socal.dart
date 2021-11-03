@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../constants.dart';
 import '../../../responsive.dart';
@@ -19,17 +18,19 @@ class Socal extends StatelessWidget {
               padding:
                   const EdgeInsets.symmetric(horizontal: kDefaultPadding / 2),
             ),
-        if (!Responsive.isMobile(context)) SizedBox(width: kDefaultPadding),
-        ElevatedButton(
-          onPressed: () {},
-          style: TextButton.styleFrom(
-            padding: EdgeInsets.symmetric(
-              horizontal: kDefaultPadding * 1.5,
-              vertical:
-                  kDefaultPadding / (Responsive.isDesktop(context) ? 1 : 2),
-            ),
+        IconButton(
+          icon: Icon(
+            Icons.near_me_outlined,
+            color: Colors.white,
           ),
-          child: Text("Barcode"),
+          onPressed: () {},
+        ),
+        IconButton(
+          icon: Icon(
+            Icons.more_vert,
+            color: Colors.white,
+          ),
+          onPressed: () {},
         ),
       ],
     );

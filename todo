@@ -1,9 +1,8 @@
 //TODO Add Firebase
-//TODO Load more button
-//TODO Check if Image is not empty
-//TODO remove comments from sidebar
-//TODO remove search bar, leave categories
-//TODO sidebar map
-//TODO fix design issues
-//TODO upload to github
-//TODO Round pictures in text?
+//TODO upload repo to github
+//TODO look up where the gallery can be added
+//TODO add messenger to write with other people about the trips and maybe get tips
+//TODO pop searchbar when scrolling up
+//TODO Are you sure you want to leave this page? when leaving the new blog side
+//TODO Use Divider() for space inbetween Containers (like in new Blog)
+//TODO Add RefreshIndicator() for new posts
