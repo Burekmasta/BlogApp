@@ -1,6 +1,3 @@
-
-
-=======
 # Blog App
 
 You like to travel and want to capture your best moments and share them with your friends and family?
