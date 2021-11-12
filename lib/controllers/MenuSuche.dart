@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:news/constants.dart';
 
-// ignore: must_be_immutable
+//! Hide Searchbar when scrolling, show again when scrolling up
 class MenuSuche extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

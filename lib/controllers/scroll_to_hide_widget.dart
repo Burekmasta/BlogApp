@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:news/constants.dart';
 
+// ! NOT WORKING YET!
 class ScrollToHideWidget extends StatefulWidget {
   final Widget child;
   final ScrollController controller;

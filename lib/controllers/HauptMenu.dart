@@ -11,7 +11,7 @@ class Haupt extends StatefulWidget {
   @override
   _Haupt createState() => _Haupt();
 }
-
+//! When SafeArea() is active there is space on the top, when it's disabled space is missing on the bottom
 class _Haupt extends State<Haupt> {
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class _Haupt extends State<Haupt> {
           width: MediaQuery.of(context).size.width,
           child: NavigationDrawerWidget()),
       drawerEdgeDragWidth: MediaQuery.of(context).size.width,
-      backgroundColor: Color(0xFF1E202C),
+      backgroundColor: kBackgroundColor,
       extendBody: true,
       body: NestedScrollView(
         floatHeaderSlivers: true,
@@ -36,7 +36,7 @@ class _Haupt extends State<Haupt> {
             backwardsCompatibility: false,
             systemOverlayStyle:
                 SystemUiOverlayStyle(statusBarColor: Colors.transparent),
-            backgroundColor: Color(0xFF1E202C),
+            backgroundColor: kBackgroundColor,
             title: Text('BlogApp',
                 style: GoogleFonts.yellowtail(
                   fontSize: 25,

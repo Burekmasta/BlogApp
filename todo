@@ -6,3 +6,9 @@
 //TODO Use Divider() for space inbetween Containers (like in new Blog)
 //TODO Add RefreshIndicator() for new posts
 //TODO Reinstall Header(), maybe stories or something else??
+
+
+//TODO How to update on Github: 1. git add .
+//TODO 2. git commit -m "Type text in here" 
+//TODO 3. git pull 
+//TODO 4. git push

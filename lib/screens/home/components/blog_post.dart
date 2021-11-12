@@ -8,6 +8,7 @@ import 'package:news/responsive.dart';
 
 import '../../../constants.dart';
 
+//! Does it need to be Stateful in order to enable the IconButtons?
 class BlogPostCard extends StatelessWidget {
   final BlogModel blog;
 

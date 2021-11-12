@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'package:intl/intl.dart';
 
+// ! Wrap everything into Expand in order to make it responsive
 class SingleBlog extends StatefulWidget {
   @override
   _SingleBlogState createState() => _SingleBlogState();
