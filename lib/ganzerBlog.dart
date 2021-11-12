@@ -24,22 +24,23 @@ class _GanzerBlogState extends State<GanzerBlog> {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
-              padding: EdgeInsets.only(
-                  top: 30,
-                  bottom: kDefaultPadding,
-                  left: kDefaultPadding,
-                  right: kDefaultPadding),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(10),
-                  bottomRight: Radius.circular(10),
-                  topLeft: Radius.circular(10),
-                  topRight: Radius.circular(10),
+            SafeArea(
+              child: Container(
+                padding: EdgeInsets.only(
+                    bottom: kDefaultPadding,
+                    left: kDefaultPadding,
+                    right: kDefaultPadding),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(10),
+                    bottomRight: Radius.circular(10),
+                    topLeft: Radius.circular(10),
+                    topRight: Radius.circular(10),
+                  ),
                 ),
+                child: blogEintrag(context),
               ),
-              child: blogEintrag(context),
             ),
           ],
         ),
@@ -101,6 +102,7 @@ class _GanzerBlogState extends State<GanzerBlog> {
             : Column(),
         widget.blog.video1.isNotEmpty
             ? ClipRRect(
+                borderRadius: BorderRadius.circular(kDefaultPadding),
                 child: ChewieListItem(
                     videoPlayerController:
                         VideoPlayerController.network(widget.blog.video1)))
@@ -123,6 +125,7 @@ class _GanzerBlogState extends State<GanzerBlog> {
             : Column(),
         widget.blog.video2.isNotEmpty
             ? ClipRRect(
+                borderRadius: BorderRadius.circular(kDefaultPadding),
                 child: ChewieListItem(
                     videoPlayerController:
                         VideoPlayerController.network(widget.blog.video2)),

@@ -39,8 +39,14 @@ dependencies:
   get: ^3.26.0
   chewie: ^0.9.10
   curved_navigation_bar: ^1.0.1
-  google_fonts: ^2.1.0
   firebase_storage: ^10.0.5
+  intl: ^0.17.0
+  flutter_rounded_date_picker: ^2.0.2
+  flutter_localizations: 
+    sdk: flutter
+    version: ^0.0.0
+  google_fonts: ^2.1.0
+    
 
 dev_dependencies:
   flutter_test:

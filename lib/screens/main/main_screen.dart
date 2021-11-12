@@ -102,9 +102,10 @@ class _MainScreenState extends State<MainScreen> {
               color: Colors.white,
             ),
     ];
+
     return Scaffold(
       extendBody: true,
-      backgroundColor: Colors.black,
+      backgroundColor: kBackgroundColor,
       body: screens[index],
       bottomNavigationBar: ScrollToHideWidget(
         controller: controller,
@@ -116,7 +117,7 @@ class _MainScreenState extends State<MainScreen> {
           animationCurve: Curves.easeInOut,
           animationDuration: Duration(milliseconds: 500),
           backgroundColor: Colors.transparent,
-          color: kDarkBlackColor,
+          color: kBackgroundColor,
         ),
       ),
     );

@@ -134,12 +134,12 @@ class BlogModel {
 
 List<BlogModel> blogPosts = [
   BlogModel(
-    ort: "Bayern",
-    date: "04 Februar 2021",
+    ort: "New York",
+    date: "04 Juni 2021",
     image:
-        "https://static.wixstatic.com/media/d1cbab_8d057b5a70b647819b7db3bec23b5b45~mv2.jpg/v1/fill/w_454,h_341,fp_0.50_0.50,q_90/d1cbab_8d057b5a70b647819b7db3bec23b5b45~mv2.webp",
-    title: "Anreise",
-    description1: "",
+        "https://www.bertelsmann.de/media/unternehmen/corporate-center/corporate-center-new-york_teaser_2_3_lt_768_retina.jpg",
+    title: "Sightseeing",
+    description1: "Hey Guys,\n\nToday was a great day with a lot of sightseeing. First of all we went to the Empire State Building and watched all over New York City.",
     bild1: "",
     video1: "",
     description2: "",
@@ -201,11 +201,11 @@ List<BlogModel> blogPosts = [
     video20: "",
   ),
   BlogModel(
-    ort: "Bayern",
-    date: "04 Februar 2021",
+    ort: "Kyoto",
+    date: "10 Mai 2021",
     image:
-        "https://static.wixstatic.com/media/d1cbab_8d057b5a70b647819b7db3bec23b5b45~mv2.jpg/v1/fill/w_454,h_341,fp_0.50_0.50,q_90/d1cbab_8d057b5a70b647819b7db3bec23b5b45~mv2.webp",
-    title: "Anreise",
+        "https://cdn.getyourguide.com/img/location/5d079d304c0d5.jpeg/88.jpg",
+    title: "Kulturschock",
     description1: "",
     bild1: "",
     video1: "",

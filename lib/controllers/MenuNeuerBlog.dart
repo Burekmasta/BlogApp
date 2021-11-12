@@ -11,7 +11,7 @@ class MenuNeuerBlog extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: kBackgroundColor,
         body: Column(
           children: [
             Container(
@@ -20,14 +20,14 @@ class MenuNeuerBlog extends StatelessWidget {
                 borderRadius: BorderRadius.all(
                   Radius.circular(kDefaultPadding),
                 ),
-                color: kDarkBlackColor,
+                color: kPrimaryColor,
               ),
               width: double.infinity,
               height: 100,
               child: Text(
                 'New Blog',
                 style: TextStyle(
-                  color: Colors.white,
+                  color: kBackgroundColor,
                   fontSize: 30.0,
                   fontWeight: FontWeight.bold,
                 ),

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-
-const kPrimaryColor = Color(0xFFFF3B1D);
+const kPrimaryColor = Color(0xFF00e5ff);
 const kDarkBlackColor = Color(0xFF191919);
 const kBgColor = Color(0xFFE7E7E7);
 const kBodyTextColor = Color(0xFF666666);
+const kBackgroundColor = Color(0xFF1E202C);
 
 const kBottomBarHeight = 60.0;
 

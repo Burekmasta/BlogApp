@@ -5,7 +5,12 @@ class WholeTrip extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      body: Text('Whole Trip'),
+      body: SafeArea(
+        child: Column(
+          children: [
+            
+          ],
+        )),
     );
   }
 }
