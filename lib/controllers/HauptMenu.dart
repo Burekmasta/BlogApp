@@ -11,14 +11,14 @@ class Haupt extends StatefulWidget {
   @override
   _Haupt createState() => _Haupt();
 }
+
 //! When SafeArea() is active there is space on the top, when it's disabled space is missing on the bottom
 class _Haupt extends State<Haupt> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       endDrawer: Container(
-          width: MediaQuery.of(context).size.width,
-          child: NavigationDrawerWidget()),
+          width: MediaQuery.of(context).size.width, child: ChatPage()),
       drawerEdgeDragWidth: MediaQuery.of(context).size.width,
       backgroundColor: kBackgroundColor,
       extendBody: true,

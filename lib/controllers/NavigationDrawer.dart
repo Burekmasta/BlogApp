@@ -3,7 +3,12 @@ import 'package:flutter/painting.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:news/constants.dart';
 
-class NavigationDrawerWidget extends StatelessWidget {
+class ChatPage extends StatefulWidget {
+  @override
+  _ChatPage createState() => _ChatPage();
+}
+
+class _ChatPage extends State<ChatPage> {
   final padding = EdgeInsets.symmetric(horizontal: 20);
   @override
   Widget build(BuildContext context) {
@@ -52,7 +57,41 @@ class NavigationDrawerWidget extends StatelessWidget {
                         ),
                       ],
                     ),
-                  )
+                  ),
+                  Container(
+                    padding: EdgeInsets.only(
+                        left: 10, right: 10, bottom: 10, top: 10),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(kDefaultPadding),
+                      ),
+                      color: Colors.transparent,
+                    ),
+                    width: double.infinity,
+                    height: 55,
+                    child: TextField(
+                      style: TextStyle(
+                        color: kBackgroundColor,
+                      ),
+                      decoration: InputDecoration(
+                        hintMaxLines: 1,
+                        fillColor: Colors.white,
+                        filled: true,
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                            borderSide: BorderSide.none),
+                        prefixIcon: Icon(
+                          Icons.search,
+                          color: kBackgroundColor,
+                        ),
+                        hintText: 'Search',
+                        hintStyle: TextStyle(
+                          color: kBackgroundColor,
+                          height: 0.4,
+                        ),
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),

@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:news/responsive.dart';
 import 'package:news/screens/main/main_screen.dart';
 import 'constants.dart';
 import 'package:firebase_core/firebase_core.dart';
-
-
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp());
 }
-
 class MyApp extends StatelessWidget {
   final Future<FirebaseApp> _fbApp = Firebase.initializeApp();
   // This widget is the root of your application.
